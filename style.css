@@ -1,0 +1,213 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 20px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+header{
+    margin-top: 20px;
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    color: hsl(0, 0%, 100%);
+}
+.logo{
+    font-size: 3rem;
+    color: hsl(34, 100%, 76%);
+    font-weight: 800;
+    transition: 0.5s ease;
+}
+nav a{
+    font-size: 1.8rem;
+    color: hsl(0, 0%, 100%);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: hsl(34, 100%, 76%);
+    border-bottom: 3px solid hsl(34, 100%, 76%);
+    transform: scale(1.1); 
+}
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: hsl(0, 0%, 0%);
+}
+.home .home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: hsl(34, 100%, 76%);
+}
+.home-content h5{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.2rem;
+}
+.home-img img{
+    width: 420px;
+    height: 420px; 
+    object-fit: cover; 
+    border-radius: 50%;
+    box-shadow: 0 0 25px hsl(34, 100%, 76%); 
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px hsl(34, 100%, 76%);
+}
+.social-icons a{
+    display: inline-flex;
+    color: hsl(0, 0%, 100%);
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid hsl(34, 100%, 76%);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.social-icons a:hover{
+    color: hsl(0, 0%, 0%);
+    transform: scale(1.3) translateY(-5px);
+    background-color: hsl(34, 100%, 76%);
+
+}
+.education-section {
+    padding: 6rem 9% 2rem;}
+
+.education-content h1 {
+    font-size: 3.5rem;
+    color: hsl(34, 100%, 76%);
+    margin-bottom: 2rem;
+}
+.education-content h2 {
+    margin-bottom: 2rem; 
+    border-bottom: 4px solid hsl(34, 100%, 76%); 
+}
+.education-content ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+.education-content ul li {
+    font-size: 1.2rem;     
+    font-weight: 400;      
+    padding-bottom: 1.2rem; 
+    color: hsl(0, 0%, 90%); 
+    border-left: 3px solid hsl(34, 100%, 76%); 
+    padding-left: 15px;   
+}
+.education-content ul li b, 
+.education-content ul li strong {
+    color: hsl(34, 100%, 76%);
+    font-weight: 700;
+}
+#menu-icon {
+    font-size: 2.5rem; 
+    color: hsl(34, 100%, 76%); 
+    cursor: pointer;
+    display: none;          
+}
+@media(max-width:995px){
+    /* 1. Stacks the logo and nav links vertically */
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 5%;
+        text-align: center;
+    }
+
+    /* 2. Resets the nav to be a simple horizontal row */
+    nav {
+        display: flex !important; /* Force it to show without hamburger */
+        position: static; /* Removes absolute positioning */
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+    }
+
+    /* 3. Smaller link text for mobile */
+    nav a {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* 4. Completely hides the hamburger icon */
+    #menu-icon {
+        display: none !important;
+    }
+
+    /* 5. Responsive Image & Home adjustments */
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding-top: 2rem;
+    }
+
+    .home-img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .logo {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .education-content h2 {
+        font-size: 1.2rem;
+    }
+}
